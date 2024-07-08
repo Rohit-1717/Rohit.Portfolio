@@ -1,31 +1,49 @@
 import React from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Projects from "./Projects"
+import { easeIn, easeInOut, motion } from "framer-motion";
+import ProfileImage from "./ProfileImage";
+
 function Home() {
   return (
     <>
       <Nav />
-      <div className="h-screen w-full bg-white px-6">
+
+      <div className=" bg-[#FCFCFD] h-full md:h-screen lg:h-screen  w-full relative px-6 lg:mt-24">
+        <div className="hidden md:block lg:block">
+          <ProfileImage />
+        </div>
         <div className="w-fit p-2 mt-10 overflow-hidden  flex font-['Montserrat'] md:mt-12 mb-4">
           <h2 className="text-[#4E525A]  text-2xl tracking-tighter md:text-3xl">
             Hey, I'm Rohit <span>👋🏻</span>
           </h2>
         </div>
         <div>
-          <div className="bg-orange-400 w-fit p-2 overflow-hidden ">
-            <h1 className="font-extrabold text-5xl font-[''Montserrat'] md:text-6xl lg:text-7xl">
-              Full Stack
-            </h1>
+          <div className="bg w-fit p-2 overflow-hidden ">
+            <motion.h1
+              initial={{ y: "100%", opacity: 0.6 }}
+              animate={{ y: "0%", opacity: 1 }}
+              transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
+              className="font-extrabold text-5xl font-[''Montserrat'] text-[#24262F] md:text-6xl lg:text-7xl"
+            >
+              <span className="text-[#6E06F2]">Full</span> Stack
+            </motion.h1>
           </div>
-          <div className="bg-pink-400 w-fit p-2 overflow-hidden font-['Montserrat']">
-            <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl">
+          <div className="bg w-fit p-2 overflow-hidden font-['Montserrat']">
+            <motion.h1
+              initial={{ y: "100%", opacity: 0.6 }}
+              animate={{ y: "0%", opacity: 1 }}
+              transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
+              className="text-[#24262F] font-extrabold text-5xl md:text-6xl lg:text-7xl"
+            >
               Developer
-            </h1>
+            </motion.h1>
           </div>
         </div>
 
         <div className="font-['Montserrat'] mt-7  md:w-[56.5vw]">
-          <p className="text-lg leading-[7.2vw] tracking-tight text-[#4E525A] md:leading-[4vw] lg:leading-[2.5vw] lg:w-[52vw] lg:text-xl">
+          <p className="text-lg leading-[7.2vw] tracking-tight text-[#24262F] md:leading-[4vw] lg:leading-[2.5vw] lg:w-[52vw] lg:text-xl">
             As a full stack developer based in India, I specialize in crafting
             sophisticated and user-centric websites that leave a lasting
             impression.
@@ -40,6 +58,10 @@ function Home() {
           </button>
         </div>
       </div>
+      <div className="md:hidden">
+        <ProfileImage />
+      </div>
+      <Projects/>
       <Footer />
     </>
   );

@@ -10,17 +10,13 @@ function Nav() {
   };
 
   return (
-    <nav className="relative bg-white shadow dark:bg-gray-800 font-['Montserrat'] text-xl">
+    <nav className="relative bg-[#FCFCFD] shadow dark:bg-gray-800 font-['Montserrat'] text-xl">
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between ">
           <NavLink to="/" className="flex items-center">
-            {/* <img
-              className="w-auto h-6 sm:h-7"
-              src="https://merakiui.com/images/full-logo.svg"
-              alt="Logo"
-            /> */}
-
-            <h1 className="text-white text-2xl text-bold font-['Montserrat']">Rohit.Dev</h1>
+            <h1 className="text-white text-2xl text-bold font-['Montserrat']">
+              Rohit.Dev
+            </h1>
           </NavLink>
 
           {/* Mobile menu button */}
@@ -76,12 +72,11 @@ function Nav() {
         >
           <div className="flex flex-col md:flex-row md:mx-6">
             <NavLink
-              exact
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "my-2 text-blue-500  transition-colors duration-300 transform  md:mx-4 md:my-0"
-                  : "my-2 text-white transition-colors duration-300 transform  md:mx-4 md:my-0"
+                  ? "my-2 text-blue-500 transition-colors duration-300 transform md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform md:mx-4 md:my-0"
               }
             >
               Home
@@ -90,8 +85,8 @@ function Nav() {
               to="/projects"
               className={({ isActive }) =>
                 isActive
-                  ? "my-2 text-blue-700 transition-colors duration-300 transform  md:mx-4 md:my-0"
-                  : "my-2 text-white transition-colors duration-300 transform  hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                  ? "my-2 text-blue-700 transition-colors duration-300 transform md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               }
             >
               Projects
@@ -100,8 +95,8 @@ function Nav() {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "my-2 text-blue-700 transition-colors duration-300 transform  md:mx-4 md:my-0"
-                  : "my-2 text-white transition-colors duration-300 transform  hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                  ? "my-2 text-blue-700 transition-colors duration-300 transform md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               }
             >
               About
