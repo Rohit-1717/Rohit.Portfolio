@@ -10,7 +10,7 @@ function Nav() {
   };
 
   return (
-    <nav className="relative bg-white shadow dark:bg-gray-800">
+    <nav className="relative bg-white shadow dark:bg-gray-800 font-['Montserrat'] text-xl">
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between ">
           <NavLink to="/" className="flex items-center">
@@ -20,11 +20,11 @@ function Nav() {
               alt="Logo"
             /> */}
 
-            <h1 className="text-white text-2xl text-bold">Rohit.Dev</h1>
+            <h1 className="text-white text-2xl text-bold font-['Montserrat']">Rohit.Dev</h1>
           </NavLink>
 
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden md:hidden">
             <button
               onClick={toggleMenu}
               type="button"
@@ -78,22 +78,31 @@ function Nav() {
             <NavLink
               exact
               to="/"
-              activeClassName="text-red-500"
-              className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0`}
+              className={({ isActive }) =>
+                isActive
+                  ? "my-2 text-blue-500  transition-colors duration-300 transform  md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform  md:mx-4 md:my-0"
+              }
             >
               Home
             </NavLink>
             <NavLink
               to="/projects"
-              activeClassName="text-red-500"
-              className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0`}
+              className={({ isActive }) =>
+                isActive
+                  ? "my-2 text-blue-700 transition-colors duration-300 transform  md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform  hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              }
             >
               Projects
             </NavLink>
             <NavLink
               to="/about"
-              activeClassName="text-red-500"
-              className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0`}
+              className={({ isActive }) =>
+                isActive
+                  ? "my-2 text-blue-700 transition-colors duration-300 transform  md:mx-4 md:my-0"
+                  : "my-2 text-white transition-colors duration-300 transform  hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              }
             >
               About
             </NavLink>
@@ -111,8 +120,10 @@ function Nav() {
         </div>
 
         {/* Contact icon visible only on larger screens */}
-        <div className="contact text-white text-3xl hidden lg:flex items-center">
-          <SiGooglemessages />
+        <div className="contact text-white text-3xl hidden lg:flex items-center md:block">
+          <NavLink to="/contact">
+            <SiGooglemessages />
+          </NavLink>
         </div>
       </div>
     </nav>

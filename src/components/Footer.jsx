@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaReddit } from "react-icons/fa6";
+import { TbBrandDiscordFilled } from "react-icons/tb";
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900">
@@ -86,9 +88,27 @@ const Footer = () => {
             >
               <FaXTwitter />
             </a>
+
+            <a
+              href="https://www.reddit.com/user/Rohit_Dev0707/"
+              className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              aria-label="Reddit"
+              target="_blank"
+            >
+              <FaReddit />
+            </a>
+
+            <a
+              href="https://discordapp.com/users/rohit.dev1717/"
+              className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              aria-label="Discord"
+              target="_blank"
+            >
+              <TbBrandDiscordFilled />
+            </a>
           </div>
           <div className="text-white text-sm mt-1 ">
-            <p>Made with ❤️ by me.</p>
+            <p>Made with 🥲 by me.</p>
           </div>
         </div>
       </div>
