@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LocomotiveScroll from "locomotive-scroll";
 import Home from "./components/Home";
 import About from "./components/About";
-import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader";
 import Admin from "./components/Admin";
+import ProjectsPage from "./components/ProjectsPage";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
