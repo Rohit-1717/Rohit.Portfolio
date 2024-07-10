@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import Footer from "./Footer";
-import Projects from "./Projects"
+import Projects from "./Projects";
 import { easeIn, easeInOut, motion } from "framer-motion";
 import ProfileImage from "./ProfileImage";
+import Skills from "./Skills";
 
 function Home() {
   return (
@@ -50,18 +52,25 @@ function Home() {
           </p>
         </div>
         <div className="flex gap-4 overflow-hidden mt-6 ">
-          <button className="border h-11  w-full text-white bg-[#8A37F5] font-bold  rounded-lg md:w-[25vw]  lg:w-[12vw] lg:h-[3.6vw]">
+          <Link
+            to="/contact"
+            className="flex justify-center items-center border h-11  w-full text-white bg-[#8A37F5] font-bold  rounded-lg md:w-[25vw]  lg:w-[12vw] lg:h-[3.6vw]"
+          >
             Get In Touch
-          </button>
-          <button className="border  h-11 w-full text-zinc-600  border-black font-bold text-sm rounded-lg md:w-[25vw] lg:w-[12vw] lg:h-[3.6vw]">
+          </Link>
+          <Link
+            to="/projects"
+            className="flex justify-center items-center border  h-11 w-full text-zinc-600  border-black font-bold text-sm rounded-lg md:w-[25vw] lg:w-[12vw] lg:h-[3.6vw]"
+          >
             Browse Projects
-          </button>
+          </Link>
         </div>
       </div>
       <div className="md:hidden">
         <ProfileImage />
       </div>
-      <Projects/>
+      <Projects />
+      <Skills />
       <Footer />
     </>
   );
