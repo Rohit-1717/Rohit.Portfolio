@@ -18,7 +18,7 @@ function Home() {
         </div>
         <div className="w-fit p-2 mt-10 overflow-hidden  flex font-['Montserrat'] md:mt-12 mb-4">
           <h2 className="text-[#4E525A]  text-2xl tracking-tighter md:text-3xl">
-            Hey, I'm Rohit <span>👋🏻</span>
+            Hey, I' Rohit <span>👋🏻</span>
           </h2>
         </div>
         <div>
