@@ -7,12 +7,14 @@ import Contact from "./components/Contact";
 import Loader from "./components/Loader";
 import Admin from "./components/Admin";
 import ProjectsPage from "./components/ProjectsPage";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
+      {/* <CustomCursor /> */}
       {/* <Loader /> */}
       <Router>
         <Routes>

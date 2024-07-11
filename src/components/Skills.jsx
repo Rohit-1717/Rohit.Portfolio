@@ -1,4 +1,6 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
+
 
 function Skills() {
   const skills = {
@@ -17,9 +19,16 @@ function Skills() {
     <>
       <div className="bg-[#FCFCFD]  w-full px-6">
         <div className="w-full py-6 ">
-          <h1 className="text-5xl text-[#24262F] font-bold font-['Montserrat'] lg:text-6xl lg:font-extrabold">
-            Skills
-            <span className="text-5xl h-fit w-fit text-[#6E06F2]">.</span>
+        <h1 className="text-5xl text-[#24262F] font-bold font-['Montserrat'] flex items-center lg:font-extrabold">
+            S <span className="text-[#6E06F2]"><Typewriter
+              options={{
+                strings: ["kills."],
+                autoStart: true,
+                loop: true,
+                devMode: true,
+              }}
+            /></span>
+            {/* <span className="text-5xl  h-fit w-fit text-[#6E06F2]">.</span> */}
           </h1>
         </div>
         <div className="flex flex-col h-full w-full font-['Montserrat'] lg:flex-row lg:justify-between">
