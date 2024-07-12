@@ -18,7 +18,7 @@ function Home() {
         </div>
         <div className="w-fit p-2 mt-10 overflow-hidden  flex font-['Montserrat'] md:mt-12 mb-4">
           <h2 className="text-[#4E525A]  text-2xl tracking-tighter md:text-3xl">
-            Hey, I' Rohit <span>👋🏻</span>
+            Hey, I'm Rohit <span>👋🏻</span>
           </h2>
         </div>
         <div>
@@ -27,7 +27,7 @@ function Home() {
               initial={{ y: "100%", opacity: 0.6 }}
               animate={{ y: "0%", opacity: 1 }}
               transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
-              className="font-extrabold text-5xl font-[''Montserrat'] text-[#24262F] md:text-6xl lg:text-7xl"
+              className="font-extrabold text-5xl font-['Montserrat'] text-[#24262F] md:text-6xl lg:text-7xl"
             >
               <span className="text-[#6E06F2]">Full</span> Stack
             </motion.h1>

@@ -8,7 +8,7 @@ function ProjectsPage() {
   return (
     <>
       <Nav />
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center px-6">
         <ProjectCards />
       </div>
       <Footer />

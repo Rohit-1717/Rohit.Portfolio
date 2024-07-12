@@ -134,7 +134,7 @@ const Footer = () => {
             </NavLink>
           </div>
           <div className="text-white text-sm mt-1 ">
-            <p>Made with 🥲 by me.</p>
+            <p>Made with ❤️ by me.</p>
           </div>
         </div>
       </div>

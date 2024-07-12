@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, transform } from "framer-motion";
 
 function ProjectCards() {
   const ProjectDets = [
@@ -35,22 +36,25 @@ function ProjectCards() {
   return (
     <>
       <div className="flex flex-col">
-        <div className="font-['Montserrat']">
-          <h1 className="text-5xl font-bold">
-            My <span>Best</span> Creation
+        <div className="font-['Montserrat'] ">
+          <h1 className="pt-20 text-5xl lg:text-7xl font-extrabold text-[#24262F] lg:pt-28 md:text-[7.8vw]">
+            My <span className="text-[#6E06F2]">Best</span> Creations
           </h1>
-          <p>
+          <p className="text-xl leading-[6.5vw] lg:text-2xl text-[#4E525A]   lg:w-[58vw] pt-4 md:text-2xl">
             Designing and Developing Robust and Stylish Web Applications for a
             Decade and Counting
           </p>
         </div>
         <div className="flex flex-col items-center">
           {ProjectDets.map((project) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: [0.35, 0.17, 0.3, 0.86] }}
               key={project.id}
-              className="flex flex-col h-auto w-[90vw] bg-zinc-500 rounded-md mb-6 mt-6 overflow-hidden"
+              className="flex flex-col h-auto w-[90vw] bg-[#fff]  rounded-md mb-6 mt-6 overflow-hidden "
             >
-              <div className="h-[30vw] w-full">
+              <div className="h-[55vw] lg:h-[30vw] w-full md:h-[52vw]">
                 <img
                   className="object-cover object-center h-full w-full"
                   src={project.projectImage}
@@ -58,14 +62,14 @@ function ProjectCards() {
                 />
               </div>
               <div className="p-4">
-                <h1 className="text-3xl text-[#24262F] font-bold font-['Montserrat']">
+                <h1 className="text-2xl lg:text-5xl text-[#24262F] font-bold font-['Montserrat'] md:text-4xl">
                   {project.projectTitle}
                 </h1>
-                <p className="text-[#4E525A] font-['Montserrat'] text-xl bg-yellow-300 mt-2 p-2">
+                <p className="text-[#60646B] text-lg font-['Montserrat'] lg:text-2xl  lg:mt-2 lg:p-2 md:text-xl md:mt-2">
                   {project.projectDescription}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
