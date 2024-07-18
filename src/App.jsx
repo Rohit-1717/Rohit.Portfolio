@@ -8,14 +8,16 @@ import Loader from "./components/Loader";
 import Admin from "./components/Admin";
 import ProjectsPage from "./components/ProjectsPage";
 import CustomCursor from "./components/CustomCursor";
+import AdminSignUp from "./components/AdminSignUp";
+import ResetPassword from "./components/ResetPassword";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
-      {/* <CustomCursor /> */}
-      {/* <Loader /> */}
+      <CustomCursor />
+      <Loader />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,6 +25,8 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-signUp" element={<AdminSignUp />} />
+          <Route path="/admin/reset-password" element={<ResetPassword />} />
         </Routes>
       </Router>
     </>

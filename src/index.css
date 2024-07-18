@@ -13,9 +13,11 @@
 
 body {
   background-color: #fcfcfd;
+  user-select: none;
 }
 
 ::selection {
-  background-color: #6c06f27e;
-  color: #4e525a;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
