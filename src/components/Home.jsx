@@ -12,7 +12,7 @@ function Home() {
     <>
       <Nav />
 
-      <div className=" bg-[#FCFCFD] h-full md:h-screen lg:h-screen  w-full relative px-6 lg:mt-24">
+      <div className=" bg-[#FCFCFD] h-full md:h-[65vh]  lg:h-screen  w-full relative px-6 lg:mt-24">
         <div className="hidden md:block lg:block">
           <ProfileImage />
         </div>
